@@ -1,0 +1,31 @@
+1.
+Montserrat Regular
+1126
+2.
+Montserrat Bold
+600
+3.
+Montserrat SemiBold
+598
+4.
+Montserrat Light
+84
+5.
+Roboto Regular
+2
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
+</style>
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+================================
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap" rel="stylesheet">
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
