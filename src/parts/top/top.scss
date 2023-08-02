@@ -1,0 +1,126 @@
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-alpha;
+    min-height: 50px;
+
+    & a {
+        color: $color-text-beta;
+        font-weight: 300;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 73% 1fr max-content;
+    }
+
+    &__nav {
+        align-self: center;
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // ---  menu ---
+    
+    .menu-item {
+        min-width: 150px;
+    }
+    
+    &__item-menu {
+        position: relative;
+    }
+    
+    &__menu-list {
+        position: absolute;
+        transform: scaleY(0);
+        border-radius: 0px 0px 20px 20px;
+        background: $color-epsilon;
+        transition: 0.3s;
+        transform-origin: top;
+    }
+    
+    &__item-menu:hover &__menu-list {
+        transform: scaleY(1);
+    }
+    
+    &__item {
+        height: 50px;
+    }
+    
+    
+    // --- /menu ---
+    &__item-menu:hover   {
+        background: $color-epsilon;
+    }
+    &__ref {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding: 10px;
+
+    }
+
+    
+    &__ref:hover {
+        background: $color-epsilon;
+    }
+
+    // ---  dec line ---
+    &__dec-line {
+        height: 100%;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        justify-self: center;
+        margin: 0 20px;
+    }
+    // --- /dec line ---
+
+    // ---  login ---
+    &__login {
+        align-self: center;
+    }
+
+    &__enter {
+        position: relative;
+        margin-left: 30px;
+        &::before {
+            content: url("../../img/enter.svg");
+            position: absolute;
+            top: 0;
+            left: -30px;
+        }
+    }
+
+    &__registration {
+        position: relative;
+        margin-left: 16px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            bottom: 2px;
+            height: 15px;
+            border-right: 1px solid $color-text-beta;
+        }
+    }
+    // ---  /login ---
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 425px) {
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}
