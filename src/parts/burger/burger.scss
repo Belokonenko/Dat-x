@@ -1,0 +1,82 @@
+// ---  burger ---
+
+.burger {
+    display: none;
+    position: relative;
+    height: 28px;
+    width: 28px;
+    overflow: hidden;
+    cursor: pointer; 
+
+    &__element {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5px;
+        width: 28px;
+        &--active {
+            height: 3px;
+        }
+    }
+    &__top {
+        top: 3px;
+        &--active {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            
+        }
+    }
+    &__mid {
+        top: 50%;
+        transform: translateY(-50%);
+        &--active {
+            left: 100%;
+        }
+    }
+    &__bot {
+        bottom: 3px;
+        &--active {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+            
+        }
+    }
+
+    &__dot {
+        width: 5px;
+        height: 5px;
+        background-color: #84c551;
+        border-radius: 50%;
+        &--active {
+            width: 3px;
+            height: 3px;
+        }
+    }
+
+    &__line {
+        width: 21px;
+        height: 5px;
+        background: #84c551;
+        border-radius: 90px;
+        &--active {
+            width: 3px;
+            height: 20px;
+        }
+    }
+
+    &__dot-r {
+        display: none;
+        &--active {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .burger {
+        display: block;
+    }
+}
+
+// ---  burger ---
