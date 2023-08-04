@@ -1,0 +1,20 @@
+.round-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $color-gamma;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-gamma;
+    }
+
+    &:hover svg path{
+        fill: #fff;
+    }
+
+}
