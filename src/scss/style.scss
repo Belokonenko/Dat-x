@@ -1,39 +1,20 @@
-@import'./libs/_reset-webacad.scss';
+@import "./libs/_reset-webacad.scss";
 
-@import'./base/_var.scss';
-@import'./base/_fonts.scss';
-@import'./base/_base.scss';
+@import "./base/_var.scss";
+@import "./base/_fonts.scss";
+@import "./base/_base.scss";
 
-@import'./mixins/_mixin.scss';
+@import "./mixins/_mixin.scss";
 
-@import'../parts/round-button/round-button.scss';
-@import'../parts/btn/btn.scss';
+@import "../parts/elements/_elements.scss";
 
-@import'../parts/top/top.scss';
-@import'../parts/logo/logo.scss';
-@import'../parts/header/header.scss';
-@import'../parts/novelties/novelties.scss';
-@import'../parts/burger/burger.scss';
-@import'../parts/order_call/order_call.scss';
-@import'../parts/basket/basket.scss';
-@import'../parts/search/search.scss';
-@import'../parts/nav_product/nav_product.scss';
-@import'../parts/banner/banner.scss';
-@import'../parts/ref/_ref.scss';
-// @import'../parts/top/top.scss';
-// @import'../parts/soc/soc.scss';
-// @import'../parts/card-m/card-m.scss';
-// @import'../parts/card-b/card-b.scss';
-// @import'../parts/rec/rec.scss';
-// @import'../parts/bestsellers/bestsellers.scss';
-// @import'../parts/newest/newest.scss';
-// @import'../parts/footer/footem.scss';
-// @import'../parts/search/search-b.scss';
-// @import'../parts/oops/oops.scss';
-// @import'../parts/description/description.scss';
-// @import'../parts/form/form.scss';
-// @import'../parts/best/best.scss';
-// @import'../parts/burger/burger.scss';
-// @import'../parts/stars/stars.scss';
-// @import'../parts/drop-menu/drop-manu.scss';
+@import "../parts/round-button/round-button.scss";
 
+@import "../parts/logo/logo.scss";
+@import "../parts/header/header.scss";
+@import "../parts/novelties/novelties.scss";
+@import "../parts/order_call/order_call.scss";
+@import "../parts/basket/basket.scss";
+@import "../parts/search/search.scss";
+@import "../parts/nav_product/nav_product.scss";
+@import "../parts/banner/banner.scss";
