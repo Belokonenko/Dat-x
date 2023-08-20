@@ -5,11 +5,6 @@
     z-index: 5;
     background-color: $color-alpha;
 
-    & a {
-        color: $color-text-beta;
-        font-weight: 300;
-    }
-
     &__container {
         display: grid;
         grid-template-columns: 73% 1fr max-content;
@@ -142,12 +137,12 @@
 @media (max-width: 1440px) {
 }
 @media (max-width: 1200px) {
-    .top__container {
+    .ref {
         font-size: 15px;
     }
 }
 @media (max-width: 1024px) {
-    .top__container {
+    .ref {
         font-size: 14px;
     }
 }
