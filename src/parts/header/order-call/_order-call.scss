@@ -4,6 +4,7 @@
     grid-template-rows: max-content;
     column-gap: 8px;
     margin-right: 10px;
+    justify-self: center;
 
     &__wrap-tel {
         display: grid;
@@ -34,11 +35,18 @@
 @media (max-width: 1024px) {
 }
 @media (max-width: 992px) {
+    .order-call {
+        justify-self: end;
+    }
 }
 @media (max-width: 768px) {
+    .order-call {
+        display: none;
+    }
 }
 @media (max-width: 425px) {
 }
 @media (max-width: 375px) {
 }
-@media (max-width: 320px) {}
+@media (max-width: 320px) {
+}
