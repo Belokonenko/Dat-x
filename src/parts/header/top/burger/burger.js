@@ -6,12 +6,14 @@ export default function burger() {
     const bot = document.querySelector(".burger__bot");
     const dots = document.querySelectorAll(".burger__dot");
     const lines = document.querySelectorAll(".burger__line");
-    const elements = document.querySelectorAll(".burger__element")
+    const elements = document.querySelectorAll(".burger__element");
+    const mobileHeader = document.querySelector(".mobile-header");
 
     if (burger) {
         burger.addEventListener("click", () => {
             top.classList.toggle("burger__top--active");
             bot.classList.toggle("burger__bot--active");
+            mobileHeader.classList.toggle("mobile-header--active")
 
             lineMidel.classList.toggle("burger__mid--active");
 
