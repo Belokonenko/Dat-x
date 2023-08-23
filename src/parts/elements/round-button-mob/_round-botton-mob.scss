@@ -1,0 +1,15 @@
+.round-button-mob {
+    border: 1px solid $color-bg-alpha;
+
+    & svg path {
+        fill: $color-text-beta;
+    }
+
+    &:hover {
+        background-color: $color-bg-alpha;
+    }
+
+    &:hover svg path {
+        fill: $color-alpha;
+    }
+}
