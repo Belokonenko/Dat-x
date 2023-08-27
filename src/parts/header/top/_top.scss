@@ -45,7 +45,7 @@
                 right: 18px;
                 top: 45%;
                 transform: translateY(-50%);
-                transition: 0.3s ease ;
+                transition: 0.3s ease;
             }
         }
         &:hover .menu__drop-btn::before {
@@ -96,32 +96,32 @@
 
     // ---  login ---
     &__login {
+        display: flex;
         align-self: center;
     }
 
     &__enter {
-        position: relative;
-        margin-left: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         &::before {
             content: url("../../img/enter.svg");
-            position: absolute;
-            width: 1em;
-            height: 1em;
-            bottom: 0.3em;
-            left: -30px;
+            margin-right: 10px;
+            margin-top: 3px;
         }
+    }
+
+    &__line {
+        align-self: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        height: 16px;
+        margin: 0 10px;
     }
 
     &__registration {
         position: relative;
-        margin-left: 16px;
-        &::before {
-            content: "";
-            position: absolute;
-            left: -10px;
-            height: 1em;
-            border-right: 1px solid $color-text-beta;
-        }
+        align-self: center;
     }
     // ---  /login ---
 }

@@ -1,4 +1,10 @@
-
 .mobile-header__nav {
-    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    .mobile-header__nav-list {
+    }
+
+    .mob-ref {
+       margin: 100px; 
+    }
 }
