@@ -8,6 +8,7 @@
 @import "./mobile-header/mobile-header.scss";
 
 .header {
+    display: grid;
     &__sud {
         display: grid;
         grid-template-columns: max-content 1fr 1fr repeat(3, max-content);

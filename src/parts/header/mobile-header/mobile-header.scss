@@ -1,6 +1,7 @@
 @import "./liked-goods/_liked-goods.scss";
 @import "./search/_search.scss";
 @import "./order-call/_order-call.scss";
+@import "./mob-basket/_mob-basket.scss";
 @import "./mob-nav/mob-nav.scss";
 
 .mobile-header {
@@ -22,7 +23,10 @@
         column-gap: 6px;
     }
 }
-.wrap-liked,
+.wrap-liked {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
 .wrap-order {
     display: flex;
     justify-content: space-between;
