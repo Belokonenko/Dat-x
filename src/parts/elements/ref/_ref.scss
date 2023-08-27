@@ -5,13 +5,18 @@
 }
 
 
-// @media (max-width: 1440px) {
-// }
-// @media (max-width: 1024px) {
-// }
+@media (max-width: 1440px) {
+
+}
+@media (max-width: 1034px) {
+
+    .ref {
+        font-size: 14px;
+    }
+}
 @media (max-width: 992px) {
     .ref{ 
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 300;
     }
 
