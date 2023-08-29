@@ -47,6 +47,11 @@
             grid-template-columns: 1fr max-content max-content max-content;
         }
     }
+    .mobile-header{
+        grid-template-rows: max-content max-content max-content max-content ;
+        row-gap: 10px;
+
+    }
     .mobile-header--active {
         display: grid;
     }
