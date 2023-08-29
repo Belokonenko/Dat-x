@@ -1,8 +1,10 @@
-@import "./liked-goods/_liked-goods.scss";
-@import "./search/_search.scss";
-@import "./order-call/_order-call.scss";
+@import "./mob-liked-goods/_mob-liked-goods.scss";
+@import "./mob-search/_mob-search.scss";
+@import "./mob-order-call/_mob-order-call.scss";
 @import "./mob-basket/_mob-basket.scss";
-@import "./mob-nav/mob-nav.scss";
+@import "./mob-nav/_mob-nav.scss";
+@import "./mob-compare/_mob-compare.scss";
+
 
 .mobile-header {
     position: absolute;
