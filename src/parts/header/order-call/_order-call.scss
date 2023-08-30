@@ -10,9 +10,21 @@
         display: grid;
     }
     &__tel {
+        display: flex;
         color: $color-text-alpha;
         font-weight: 400;
+        
+
+        &::after {
+            content: url("../img/arr-menu.svg");
+            margin-left: 5px;
+                transition: 0.3s ease;
+        }
+        &:hover.order-call__tel::after{
+            transform: rotate(180deg);
+        }
     }
+
     &__text {
         position: relative;
         color: $color-beta;
