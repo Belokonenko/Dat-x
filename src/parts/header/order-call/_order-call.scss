@@ -9,33 +9,46 @@
     &__wrap-tel {
         display: grid;
     }
-    .tel-menu {
-        display: flex;
-        position: relative; 
+    &__tel {
+            color: $color-text-alpha;
+            font-weight: 300;
 
-        color: $color-text-alpha;
-        font-weight: 400;
-
-        &::after {
-            content: url("../img/arr-menu.svg");
-            margin-left: 5px;
-                transition: 0.3s ease;
-        }
-        
-        &:hover.order-call__tel::after{
-            transform: rotate(180deg);
-        }
-        
+    }
+    .tel-block {
         &__list {
             position: absolute;
-            transform: scaleY(1);
-        }
-        .tel-menu-wrap:hover {
             transform: scaleY(0);
-            color: red;
-            background-color: red;
+            transition: 0.3s ease;
+            transform-origin: top;
+            background-color: $color-bg-alpha;
+            z-index: 1;
+
+            &--active {
+                transform: scale(1);
+            }
         }
 
+        // &:hover .tel-block__list {
+        //     transform: scaleY(1);
+        // }
+
+        .tel-menu {
+            display: flex;
+            position: relative;
+
+            color: $color-text-alpha;
+            font-weight: 400;
+
+            &::after {
+                content: url("../img/arr-menu.svg");
+                margin-left: 5px;
+                transition: 0.3s ease;
+            }
+
+            &:hover.order-call__tel::after {
+                transform: rotate(180deg);
+            }
+        }
     }
 
     &__text {
