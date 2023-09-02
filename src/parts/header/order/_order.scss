@@ -1,0 +1,86 @@
+.order {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content;
+    column-gap: 8px;
+    margin-right: 10px;
+    justify-self: center;
+
+    &__wrap {
+        display: grid;
+    }
+
+    &__tel-block {
+    }
+    
+    &__tel-ref {
+        color: $color-text-alpha;
+        font-weight: 300;
+    }
+    &__tel-menu {
+        display: flex;
+        position: relative;
+
+        color: $color-text-alpha;
+        font-weight: 400;
+
+        &::after {
+            content: url("../img/arr-menu.svg");
+            margin-left: 5px;
+            transition: 0.3s ease;
+        }
+
+        &:hover.order__tel-ref::after {
+            transform: rotate(180deg);
+        }
+    }
+    &__list {
+        position: absolute;
+        transform: scaleY(0);
+        transition: 0.3s ease;
+        transform-origin: top;
+        background-color: $color-bg-alpha;
+        z-index: 1;
+
+        &--active {
+            transform: scale(1);
+        }
+    }
+
+    &__text {
+        position: relative;
+        color: $color-beta;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 90%;
+            height: 1px;
+            border-bottom: 1px solid $color-beta;
+            color: $color-beta;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 992px) {
+    .order {
+        justify-self: end;
+    }
+}
+@media (max-width: 768px) {
+    .order {
+        display: none;
+    }
+}
+@media (max-width: 425px) {
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}

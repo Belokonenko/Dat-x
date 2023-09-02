@@ -1,11 +1,11 @@
+@import "./mobile-header/mobile-header.scss";
 @import "./top/_top.scss";
 @import "./logo/_logo.scss";
 @import "./search/_search.scss";
-@import "./order-call/order-call.scss";
+@import "./order/_order.scss";
 @import "./liked-goods/_liked-goods.scss";
 @import "./compare/_compare.scss";
 @import "./basket/_basket.scss";
-@import "./mobile-header/mobile-header.scss";
 
 .header {
     display: grid;
