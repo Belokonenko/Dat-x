@@ -8,10 +8,18 @@
     align-items: center;
     transition: 0.3s ease;
     padding: 2px 4px;
+    cursor: pointer;
 
     &:hover {
         border: 1px solid $color-gamma;
         color: $color-text-beta;
         background-color: $color-gamma;
+    }
+    
+    &--active {
+        border: 1px solid $color-gamma;
+        color: $color-text-beta;
+        background-color: $color-gamma;
+
     }
 }

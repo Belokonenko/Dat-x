@@ -2,11 +2,29 @@
     position: relative;
     top: -250px;
     min-height: 933px;
-    background-image: url(./img/baner.jpg);
+    background-image: url(../img/baner.jpg);
     background-repeat: no-repeat;
     background-size: 70% 100%;
-    background-position-y: bottom ;
+    background-position-y: bottom;
     border: 1px solid red;
 
-    background-image: url(../../img/baner.jpg);
+    &__wrap {
+        display: flex;
+        align-items: center;
+        min-height: inherit;
+    }
+
+    &__sub-title {
+        font-size: 55px;
+        font-weight: 300;
+        margin-left: 41px;
+    }
+
+    &__desc {
+        width: 561px;
+        margin-left: 41px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        font-weight: 400;
+    }
 }
