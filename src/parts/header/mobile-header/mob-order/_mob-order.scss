@@ -1,20 +1,13 @@
-.mob-order {
-    color: $color-text-beta;
+.order__mob-item {
+    color: #fff;
 }
 
-.mob-tel {
-    color: $color-text-beta;
-}
-
-.mob-list {
-    background-color: $color-alpha;
-}
 @media (max-width: 1440px) {
 }
 @media (max-width: 1024px) {
 }
 @media (max-width: 992px) {
-    .mob-order-call {
+    .mob-order {
         display: grid;
     }
     .mob-button {
@@ -22,7 +15,7 @@
     }
 }
 @media (max-width: 768px) {
-    .order-call {
+    .order {
         margin: 0;
     }
 }
