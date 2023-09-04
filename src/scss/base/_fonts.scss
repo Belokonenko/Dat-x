@@ -2,35 +2,35 @@
     font-family: "Montserrat";
     src: local("Montserrat-Bold"), url("/fonts/Montserrat-Bold.woff"),
         local("Montserrat-Bold"), url("/fonts/Montserrat-Bold.woff2");
-    font-size: Bold;
+    font-weight: Bold;
     font-style: normal;
     font-display: swap;
 
     font-family: "Montserrat";
     src: local("Montserrat-Light"), url("/fonts/Montserrat-Light.woff"),
         local("Montserrat-Light"), url("/fonts/Montserrat-Light.woff2");
-    font-size: Light;
+    font-weight: Light;
     font-style: normal;
     font-display: swap;
 
     font-family: "Montserrat";
     src: local("Montserrat-Regular"), url("/fonts/Montserrat-Regular.woff"),
         local("Montserrat-Regular"), url("/fonts/Montserrat-Regular.woff2");
-    font-size: Regular;
+    font-weight: Regular;
     font-style: normal;
     font-display: swap;
     
     font-family: "Montserrat";
     src: local("Montserrat-SemiBolt"), url("/fonts/Montserrat-SemiBolt.woff"),
         local("Montserrat-SemiBolt"), url("/fonts/Montserrat-SemiBolt.woff2");
-    font-size: SemiBold;
+    font-weight: SemiBold;
     font-style: normal;
     font-display: swap;
     
     font-family: "Roboto";
     src: local("Roboto-Regular"), url("/fonts/Roboto-Regular.woff"),
         local("Roboto-Regular"), url("/fonts/Roboto-Regular.woff2");
-    font-size: SemiBold;
+    font-weight: SemiBold;
     font-style: normal;
     font-display: swap;
 }
