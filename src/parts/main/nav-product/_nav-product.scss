@@ -2,17 +2,21 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 90px;
-    padding-top: 170px;
+    margin-top: 20px;
 
+    * {
+        z-index: 1;
+    }
+    
+    &__btn {
+        flex: 0 1 19%;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+    
+    &__svg {
+        margin: 0 12px;
+        min-width: 24px;
+        min-height: 24px;
+    }
 }
-.nav-product__btn {
-    flex: 0 1 19%;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-}
-.nav-product__svg {
-    margin: 0 12px;
-    min-width: 24px;
-    min-height: 24px;
-}
-

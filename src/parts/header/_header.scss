@@ -1,12 +1,3 @@
-@import "./top/_top.scss";
-@import "./logo/_logo.scss";
-@import "./search/_search.scss";
-@import "./order/_order.scss";
-@import "./liked-goods/_liked-goods.scss";
-@import "./compare/_compare.scss";
-@import "./basket/_basket.scss";
-@import "./mobile-header/mobile-header.scss";
-
 .header {
     display: grid;
     &__sud {
@@ -17,6 +8,10 @@
         align-items: center;
         column-gap: 6px;
     }
+    *{
+        z-index: 1;
+    }
+
 }
 
 // @media (max-width: 1440px) {
@@ -38,3 +33,12 @@
 // @media (max-width: 375px) {
 // }
 // @media (max-width: 320px) {
+//
+@import "./top/_top.scss";
+@import "./logo/_logo.scss";
+@import "./search/_search.scss";
+@import "./order/_order.scss";
+@import "./liked-goods/_liked-goods.scss";
+@import "./compare/_compare.scss";
+@import "./basket/_basket.scss";
+@import "./mobile-header/mobile-header.scss";

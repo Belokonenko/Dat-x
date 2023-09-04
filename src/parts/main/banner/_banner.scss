@@ -1,10 +1,12 @@
 .banner {
-    height: 983px;
-    background-image: url(../../img/baner.jpg);
+    position: relative;
+    top: -250px;
+    min-height: 933px;
+    background-image: url(./img/baner.jpg);
     background-repeat: no-repeat;
-    background-size: content;
+    background-size: 70% 100%;
+    background-position-y: bottom ;
+    border: 1px solid red;
 
-
-
-
+    background-image: url(../../img/baner.jpg);
 }
