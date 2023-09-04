@@ -1,17 +1,17 @@
 .btn {
-    width: 202px;
-    height: 40px;
+    display: flex;
+    max-width: 200px;
+    min-height: 40px;
     border-radius: 20px;
     border: 1px solid #1e6140;
-    font-size: 0.9px;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    padding: 2px 4px;
+
     &:hover {
         border: 1px solid $color-gamma;
         color: $color-text-beta;
-    }
-    svg {
-        margin-right: 8px;
+        background-color: $color-gamma;
     }
 }

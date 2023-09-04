@@ -6,11 +6,13 @@
 
 }
 .nav-product__btn {
-    padding: 0 10px 0 0;
+    flex: 0 1 19%;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 .nav-product__svg {
-    width: 30px;
-    height: 25px;
-    margin-left: 10px;
+    margin: 0 12px;
+    min-width: 24px;
+    min-height: 24px;
 }
 
