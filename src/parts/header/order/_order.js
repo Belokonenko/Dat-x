@@ -12,9 +12,4 @@ export default function order() {
         });
     });
 
-    orderTelRefs.forEach((item) => {
-        item.addEventListener("click", ()=> {
-            telBlockList[i].classList.remove("order__list--active");
-        });
-    });
 }
