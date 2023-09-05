@@ -8,8 +8,11 @@
 
     &__wrap {
         display: grid;
+        z-index: 2;
     }
-
+    &__tel-block {
+        z-index: 2;
+    }
     &__tel-ref {
         color: $color-text-alpha;
         font-weight: 300;
@@ -37,7 +40,6 @@
         transition: 0.3s ease;
         transform-origin: top;
         background-color: $color-bg-alpha;
-        z-index: 1;
 
         &--active {
             transform: scale(1);

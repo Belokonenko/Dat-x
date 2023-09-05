@@ -12,9 +12,9 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
     min-height: 100%;
     background-color: $color-alpha;
+    z-index: 3;
 
     &__sub {
         display: grid;
@@ -52,7 +52,6 @@
     .mobile-header{
         grid-template-rows: max-content max-content max-content max-content ;
         row-gap: 10px;
-        z-index: 2;
 
     }
     .mobile-header--active {

@@ -7,17 +7,14 @@
         min-height: 150px;
         align-items: center;
         column-gap: 6px;
+        z-index: 2;
     }
-    *{
-        z-index: 1;
-    }
-
 }
 
 // @media (max-width: 1440px) {
 // }
-// @media (max-width: 1024px) {
-// }
+@media (max-width: 1024px) {
+}
 @media (max-width: 992px) {
     .header {
         &__sud {
