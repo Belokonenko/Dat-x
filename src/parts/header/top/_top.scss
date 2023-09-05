@@ -143,7 +143,11 @@
 }
 @media (max-width: 1200px) {
 }
-@media (max-width: 1024px) {
+@media (max-width: 1060px) {
+    .top {
+        font-size: 0.9rem;
+    }
+
 }
 @media (max-width: 992px) {
     .top__container {

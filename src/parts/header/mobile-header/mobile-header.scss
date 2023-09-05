@@ -52,6 +52,7 @@
     .mobile-header{
         grid-template-rows: max-content max-content max-content max-content ;
         row-gap: 10px;
+        z-index: 2;
 
     }
     .mobile-header--active {
