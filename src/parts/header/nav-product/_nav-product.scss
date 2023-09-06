@@ -12,11 +12,20 @@
         font-size: 0.8rem;
         margin-bottom: 1rem;
         background-color: $color-bg-alpha;
-        
+        transition: all 0.3s ease;
+        & svg path {
+            fill: $color-beta;
+            stroke: $color-text-beta;
+            stroke-width: 0.2;
+        }
+
         &:hover {
             border: 1px solid $color-delta;
             color: $color-text-beta;
             background-color: $color-delta;
+        }
+        &:hover svg path {
+            fill: $color-text-beta;
         }
     }
 
@@ -24,6 +33,10 @@
         margin: 0 12px;
         min-width: 24px;
         min-height: 24px;
+    }
+
+    &__svg path {
+        transition: 0.3s ease;
     }
 }
 
@@ -47,16 +60,30 @@
     .nav-product {
         flex-direction: column;
         flex-wrap: nowrap;
-
+        background-color: red;
+        gap: 10px;
+        
         &__btn {
-            // transform: scale(0);
             flex: 1 1 100%;
             justify-content: start;
+            margin-bottom: 0;
             background-color: $color-delta;
-            color: $color-text-beta;
             border: 1px solid $color-delta;
+            color: $color-text-beta;
+            font-size: 1rem;
+
+            &:not(:first-child) {
+                // display: none;
+                transform: scale(1);
+                transform-origin: top;
+                
+            }
+
             & svg path {
                 fill: $color-text-beta;
+            }
+            &:first-of-type svg path {
+                stroke: $color-delta;
             }
         }
     }
