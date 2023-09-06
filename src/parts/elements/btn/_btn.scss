@@ -1,6 +1,5 @@
 .btn {
     display: flex;
-    max-width: 200px;
     min-height: 40px;
     border-radius: 20px;
     border: 1px solid #1e6140;
@@ -13,7 +12,7 @@
     &:hover {
         border: 1px solid $color-gamma;
         color: $color-text-beta;
-        background-color: $color-gamma;
+        background-color: $color-delta;
     }
 
     &:hover svg path {
@@ -23,7 +22,7 @@
     &--active {
         border: 1px solid $color-gamma;
         color: $color-text-beta;
-        background-color: $color-gamma;
+        background-color: $color-delta;
 
     }
 }
