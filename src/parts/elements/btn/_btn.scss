@@ -15,6 +15,10 @@
         color: $color-text-beta;
         background-color: $color-gamma;
     }
+
+    &:hover svg path {
+        fill:$color-text-beta;
+    }
     
     &--active {
         border: 1px solid $color-gamma;
