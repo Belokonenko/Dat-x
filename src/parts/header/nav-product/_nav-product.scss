@@ -1,52 +1,90 @@
 .nav-product {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 90px;
-    margin-top: 20px;
     z-index: 1;
+    margin-bottom: 90px;
+    margin-top: 11px;
 
-    &__btn {
-        flex: 0 0 19%;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        margin-bottom: 1rem;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 6px;
+    }
+
+    &__item {
+        flex: 0 1 19%;
+        font-size: 0.875rem;
         background-color: $color-bg-alpha;
-        transition: all 0.3s ease;
-        & svg path {
-            fill: $color-beta;
-            stroke: $color-text-beta;
-            stroke-width: 0.2;
-        }
+        transition: all .3s ease;
+        border: 1px solid $color-alpha;
 
         &:hover {
-            border: 1px solid $color-delta;
             color: $color-text-beta;
+            border: 1px solid $color-delta;
             background-color: $color-delta;
         }
-        &:hover svg path {
+
+        &:hover .nav-product__svg path {
             fill: $color-text-beta;
         }
     }
 
+    &__ref {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 4px;
+        font-size: .8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__svg path {
+        fill: $color-beta;
+        stroke: $color-text-beta;
+        stroke-width: 0.2;
+        transition: all .3s ease;
+    }
+
+    &__str {
+        text-transform: uppercase;
+    }
+    
     &__svg {
         margin: 0 12px;
         min-width: 24px;
         min-height: 24px;
+        transition: all 3s ease;
     }
+    
+    &__btn-arr {
+        position: absolute;
+        right: 0;
+        // display: none;
+        height: 100%;
+        width: 50px;
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+        &::before {
+            content: url('../../../img/arr-white.svg');
+            position: absolute;
+            left: 20px;
+            top:10px;
+        }
 
-    &__svg path {
-        transition: 0.3s ease;
     }
 }
+
+// --- adaptive ----
 
 // @media (max-width: 1440px) {
 // }
 //
 @media (max-width: 1200px) {
     .nav-product {
-        &__btn {
-            font-size: 0.7rem;
+        &__ref {
+            font-size: 0.8rem;
         }
     }
 }
@@ -54,37 +92,28 @@
 // }
 // @media (max-width: 1024px) {
 // }
-// @media (max-width: 992px) {
-// }
+@media (max-width: 992px) {
+    .nav-product {
+        &__list {
+            font-size: 0.7rem;
+        }
+
+        &__ref {
+            font-size: 0.7rem;
+        }
+    }
+}
 @media (max-width: 768px) {
     .nav-product {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        background-color: red;
-        gap: 10px;
-        
-        &__btn {
-            flex: 1 1 100%;
-            justify-content: start;
-            margin-bottom: 0;
-            background-color: $color-delta;
-            border: 1px solid $color-delta;
-            color: $color-text-beta;
+        justify-content: center;
+        &__list {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(5, max-content);
+            row-gap: 5px;
+        }
+
+        &__ref {
             font-size: 1rem;
-
-            &:not(:first-child) {
-                // display: none;
-                transform: scale(1);
-                transform-origin: top;
-                
-            }
-
-            & svg path {
-                fill: $color-text-beta;
-            }
-            &:first-of-type svg path {
-                stroke: $color-delta;
-            }
         }
     }
 }
