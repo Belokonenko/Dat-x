@@ -121,31 +121,50 @@
         &__ref {
             font-size: 1rem;
         }
-        
+
         &__item {
-                color: $color-text-beta;
-                border: 1px solid $color-delta;
-                background-color: $color-delta;
+            color: $color-text-beta;
+            border: 1px solid $color-delta;
+            background-color: $color-delta;
+            transition: all 3s ease;
+            transform: scale(1);
 
             & .nav-product__svg path {
                 fill: $color-text-beta;
             }
         }
 
+        &__item-hidenn {
+            display: none;
+            transform: scale(0);
+        }
+
+        &__item-viseble {
+            display: block;
+            transform: scale(1);
+        }
+
         &__btn-arr {
             position: absolute;
             right: 0;
-            // display: none;
             height: 100%;
             width: 50px;
             background-color: transparent;
             border-color: transparent;
             outline: none;
+
             &::before {
                 content: url("../../../img/arr-white.svg");
                 position: absolute;
                 left: 20px;
                 top: 10px;
+                transform: all 3s ease;
+            }
+
+            &--active {
+                &::before {
+                    transform: rotate(180deg); 
+                }
             }
         }
     }
