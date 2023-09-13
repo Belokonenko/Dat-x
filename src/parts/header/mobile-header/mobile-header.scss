@@ -3,18 +3,19 @@
 @import "./mob-order/_mob-order.scss";
 @import "./mob-basket/_mob-basket.scss";
 @import "./mob-nav/_mob-nav.scss";
-@import"./mob-line/_mob-line.scss";
+@import "./mob-line/_mob-line.scss";
 @import "./mob-compare/_mob-compare.scss";
 
-
 .mobile-header {
+    display: grid;
     position: absolute;
-    top: 0;
+    top: -250%;
     left: 0;
     right: 0;
     min-height: 100%;
     background-color: $color-alpha;
     z-index: 3;
+    transition: all 1s ease;
 
     &__sub {
         display: grid;
@@ -39,23 +40,22 @@
     justify-content: start;
 }
 
-// @media (max-width: 1440px) {
-// }
-// @media (max-width: 1024px) {
-// }
+@media (max-width: 1440px) {
+}
+@media (max-width: 1024px) {
+}
 @media (max-width: 992px) {
     .header {
         &__sud {
             grid-template-columns: 1fr max-content max-content max-content;
         }
     }
-    .mobile-header{
-        grid-template-rows: max-content max-content max-content max-content ;
+    .mobile-header {
+        grid-template-rows: max-content max-content max-content max-content;
         row-gap: 10px;
-
     }
     .mobile-header--active {
-        display: grid;
+        top: 0%;
     }
 }
 // @media (max-width: 768px) {
