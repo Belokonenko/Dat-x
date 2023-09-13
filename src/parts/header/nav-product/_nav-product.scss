@@ -66,6 +66,7 @@
         background-color: transparent;
         border-color: transparent;
         outline: none;
+
         &::before {
             content: url("../../../img/arr-white.svg");
             position: absolute;
@@ -73,7 +74,7 @@
             top: 10px;
             width: 12px;
             height: 10px;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
         }
     }
 }
@@ -129,7 +130,7 @@
             color: $color-text-beta;
             border: 1px solid $color-delta;
             background-color: $color-delta;
-            transition: all 3s ease;
+            transition: all .3s ease;
             transform: scale(1);
 
             & .nav-product__svg path {
@@ -138,13 +139,13 @@
         }
 
         &__item-hidenn {
-            display: none;
             transform: scale(0);
+            transform-origin: top;
         }
 
         &__item-viseble {
-            display: block;
             transform: scale(1);
+
         }
 
         &__btn-arr {
@@ -157,16 +158,12 @@
             outline: none;
 
             &::before {
-                content: url("../../../img/arr-white.svg");
-                position: absolute;
-                left: 20px;
-                top: 10px;
                 transform: all 3s ease;
             }
 
             &--active {
                 &::before {
-                    transform: rotate(180deg); 
+                    transform: rotate(180deg);
                 }
             }
         }

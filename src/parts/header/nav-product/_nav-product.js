@@ -25,6 +25,8 @@ export default function navProduct() {
                 navItemsHidenn.forEach((item) => {
                     item.classList.remove("nav-product__item-viseble");
                 });
+            
+            navProductBtnArr.classList.remove("nav-product__btn-arr--active")// roteate arr 0
             }
         });
     });
