@@ -1,25 +1,35 @@
 .banner {
-    min-height: 933px;
+    height: 100vh;
+    max-height: 983px;
     background-image: url(../img/baner.jpg);
     background-repeat: no-repeat;
     background-size: 70% 100%;
     background-position-y: bottom;
-
-    &__text {
-        
+    // background-color: rgba(2, 2, 1, 0.3);
+    &__container-big {
+        position: relative;
+        height: inherit;
+        // background-color: rgba(2, 2, 1, 0.3);
+        height: 100%;
     }
 
-    &__wrap {
+    &__container {
+        // background-color: rgba(2, 2, 1, 0.3);
+        height: 100%;
+    }
+
+    &__box-desc {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         min-height: inherit;
-        margin-left: 41px; 
+        height: 100%;
     }
 
     &__sub-title {
         font-size: 55px;
         font-weight: 300;
-        margin-left: 41px; 
+        margin-left: 41px;
     }
 
     &__desc {
@@ -28,9 +38,45 @@
         font-size: 18px;
         font-weight: 400;
         margin-bottom: 23px;
-        margin-left: 41px; 
+        margin-left: 41px;
+        z-index: 1;
     }
+
     &__btn {
-        margin-left: 41px; 
+        margin-left: 41px;
+    }
+
+    &__img-wrap {
+        display: flex;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 58%;
+        width: 42%;
+
+    }
+
+    &__img {
+        border-radius: 30% 0 40% 0;
+    }
+
+    .leaf1 {
+        position: absolute;
+        left: -18%;
+        bottom: 16%;
+        width: 30%;
+    }
+    .leaf2 {
+        position: absolute;
+        left: -13%;
+        bottom: 10%;
+        width: 20%;
+    }
+    
+    .leaf3 {
+        position: absolute;
+        right: 3%;
+        top: -15%;
+        width: 30%;
     }
 }

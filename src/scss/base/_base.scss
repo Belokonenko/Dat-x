@@ -39,6 +39,11 @@ ul {
     list-style: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .page-body {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -56,6 +61,7 @@ ul {
 
 // ===  container  ===
 .container {
+
     margin: 0 auto;
     padding: 0 80px;
     width: 100%;
