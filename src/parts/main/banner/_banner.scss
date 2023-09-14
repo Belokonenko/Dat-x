@@ -4,25 +4,33 @@
     background-repeat: no-repeat;
     background-size: 70% 100%;
     background-position-y: bottom;
-    border: 1px solid red;
+
+    &__text {
+        
+    }
 
     &__wrap {
         display: flex;
         align-items: center;
         min-height: inherit;
+        margin-left: 41px; 
     }
 
     &__sub-title {
         font-size: 55px;
         font-weight: 300;
-        margin-left: 41px;
+        margin-left: 41px; 
     }
 
     &__desc {
         width: 561px;
-        margin-left: 41px;
         color: rgba(0, 0, 0, 0.5);
         font-size: 18px;
         font-weight: 400;
+        margin-bottom: 23px;
+        margin-left: 41px; 
+    }
+    &__btn {
+        margin-left: 41px; 
     }
 }

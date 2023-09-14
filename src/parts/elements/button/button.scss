@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    max-width: 218px;
+    min-height: 47px;
+    background-color: $color-delta;
+    color: $color-text-beta;
+
+    &:hover {
+
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.2s ease-in-out;
+        transition: all .3s ease;
+    }
+
+    &:active {
+        background-color: $color-epsilon;
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.1s ease-in-out;
+    }
+}
