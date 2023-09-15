@@ -13,7 +13,7 @@
         flex: 0 1 19%;
         font-size: 0.875rem;
         background-color: $color-bg-alpha;
-        transition: all 0.3s ease;
+        transition: all .3s ease , color 0.1s ease;
         border: 1px solid $color-alpha;
 
         &:hover {
@@ -44,6 +44,7 @@
         stroke: $color-text-beta;
         stroke-width: 0.2;
         transition: all 0.3s ease;
+
     }
 
     &__str {
@@ -54,7 +55,6 @@
         margin: 0 12px;
         min-width: 24px;
         min-height: 24px;
-        transition: all 3s ease;
     }
 
     &__btn-arr {
@@ -149,6 +149,7 @@
         }
 
         &__btn-arr {
+            display: block;
             position: absolute;
             right: 0;
             height: 100%;
