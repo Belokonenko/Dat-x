@@ -119,12 +119,9 @@
         &__list {
             grid-template-columns: 100%;
             grid-template-rows: repeat(5, max-content);
-            row-gap: 5px;
+            row-gap: 10px;
         }
 
-        &__ref {
-            font-size: 1rem;
-        }
 
         &__item {
             color: $color-text-beta;
@@ -132,10 +129,20 @@
             background-color: $color-delta;
             transition: all .3s ease;
             transform: scale(1);
+            padding: 5px;
+
+            &:active {
+                background-color: $color-epsilon;    
+                border-color:inherit ;
+            }
 
             & .nav-product__svg path {
                 fill: $color-text-beta;
             }
+        }
+        
+        &__ref {
+            font-size: 1rem;
         }
 
         &__item-hidenn {

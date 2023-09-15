@@ -10,18 +10,25 @@
         display: grid;
         z-index: 2;
     }
+    
     &__tel-block {
         z-index: 2;
     }
+    
     &__tel-ref {
         color: $color-text-alpha;
         font-weight: 300;
+        &:hover {
+            color: $color-delta;
+        }
+        
     }
+    
     &__tel-menu {
         display: flex;
         position: relative;
 
-        color: $color-text-alpha;
+        // color: $color-text-alpha;
         font-weight: 400;
 
         &::after {
@@ -34,6 +41,7 @@
             transform: rotate(180deg);
         }
     }
+    
     &__list {
         position: absolute;
         transform: scaleY(0);
