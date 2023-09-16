@@ -9,10 +9,9 @@
     color: $color-text-beta;
 
     &:hover {
-
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         transition: box-shadow 0.2s ease-in-out;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
     }
 
     &:active {
@@ -21,3 +20,23 @@
         transition: box-shadow 0.1s ease-in-out;
     }
 }
+
+// @media (max-width: 1440px) {
+// }
+// @media (max-width: 1024px) {
+// }
+@media (max-width: 992px) {
+
+    .button {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+}
+
+// @media (max-width: 425px) {
+// }
+// @media (max-width: 375px) {
+// }
+// @media (max-width: 320px) {

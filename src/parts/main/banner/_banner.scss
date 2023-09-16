@@ -2,11 +2,13 @@
     position: relative;
     height: 100vh;
     max-height: 1300px;
-    min-height: 900px ;
+    min-height: 1000px;
+
     background-image: url(../img/baner.jpg);
     background-repeat: no-repeat;
     background-size: 70% 100%;
     background-position-y: bottom;
+
     &::before {
         position: absolute;
         content: "";
@@ -27,30 +29,23 @@
 
     &__container {
         height: 100%;
+        padding-top: 30%;
     }
 
-    &__box-desc {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: inherit;
-        height: 100%;
+    &__title {
+        font-size: 3.438rem;
     }
 
     &__sub-title {
-        font-size: 55px;
+        font-size: 3.438rem;
         font-weight: 300;
         margin-left: 41px;
     }
 
     &__desc {
         max-width: 561px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 18px;
-        font-weight: 400;
         margin-bottom: 23px;
         margin-left: 41px;
-        z-index: 1;
     }
 
     &__btn {
@@ -90,3 +85,95 @@
         width: 30%;
     }
 }
+
+//---  adaptive ---
+
+@media (max-width: 1620px) {
+    .banner {
+        &__img-wrap {
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .banner {
+    }
+}
+// @media (max-width: 1024px) {
+// }
+@media (max-width: 992px) {
+    .banner {
+        &__title {
+            font-size: 2rem;
+        }
+        &__sub-title {
+            font-size: 2rem;
+        }
+
+        &__container {
+            padding-top: 20vh;
+        }
+        &__img-wrap {
+            width: 500px;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__img {
+        }
+
+        &__box-desc {
+            justify-content: start;
+            padding-top: 250px;
+        }
+        &__btn {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 5%;
+            margin: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
+    .banner {
+        &__title {
+            font-size: 1.563rem;
+        }
+        &__sub-title {
+            font-size: 1.563rem;
+            margin-bottom: 20px;
+        }
+
+        &__img-wrap {
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .banner {
+        background-image: url(../img/baner.jpg);
+
+        &__sub-title {
+            font-size: 1.563rem;
+            margin-bottom: 20px;
+        }
+
+        // &__img-wrap {
+        //     width: 100%;
+        //     padding:0 5px ;
+        // }
+    }
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}
+
+//--- /adaptive ---

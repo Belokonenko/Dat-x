@@ -1,6 +1,6 @@
 .title {
-        font-size: 55px;
-        font-weight: 700;
+    font-size: 3.438rem;
+    font-weight: 700;
     &::before {
         content: url(../img/leaf.svg);
         height: 32px;
@@ -8,3 +8,28 @@
         margin-right: 12px;
     }
 }
+
+// @media (max-width: 1440px) {
+// }
+// @media (max-width: 1024px) {
+// }
+@media (max-width: 992px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 425px) {
+    .title {
+        font-size: 1.563rem;
+    }
+}
+// @media (max-width: 375px) {
+// }
+// @media (max-width: 320px) {
+//
+// }
