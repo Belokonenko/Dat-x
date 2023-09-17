@@ -102,6 +102,11 @@
 // }
 @media (max-width: 992px) {
     .banner {
+
+        &__container {
+            padding-top: 210px;
+        }
+        
         &__title {
             font-size: 2rem;
         }
@@ -109,9 +114,6 @@
             font-size: 2rem;
         }
 
-        &__container {
-            padding-top: 20vh;
-        }
         &__img-wrap {
             width: 500px;
             bottom: 12%;
@@ -141,6 +143,13 @@
 
 @media (max-width: 600px) {
     .banner {
+        background-image: url(../img/banner-mob.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+        &__container {
+            padding-top: 200px;
+        }
+
         &__title {
             font-size: 1.563rem;
         }
@@ -158,7 +167,6 @@
 
 @media (max-width: 425px) {
     .banner {
-        background-image: url(../img/baner.jpg);
 
         &__sub-title {
             font-size: 1.563rem;
