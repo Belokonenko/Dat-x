@@ -1,0 +1,22 @@
+.seeds {
+    background-image: url(../../../img/nov.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 627px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: inherit;
+        gap: 10px;
+    }
+    &__title {
+        color: $color-text-beta;
+    }
+
+    &__text {
+        color: $color-text-beta;
+        line-height: 1.6;
+    }
+}
