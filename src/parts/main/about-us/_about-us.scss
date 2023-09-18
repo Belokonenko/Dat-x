@@ -28,8 +28,26 @@
     //--- img ---
     
     &__img-wrap {
+        position: relative;
+        background-color: red;
+        align-self: start;
     }
+    
     &__img {
+
+    }
+
+    &__leaf1 {
+        position: absolute;
+        width: 35%;
+        left: -10%;
+        bottom: 13%;
+    }
+    &__leaf2 {
+        position: absolute;
+        width: 25%;
+        left: 10%;
+        bottom: -3%;
     }
     
     //--- /img ---

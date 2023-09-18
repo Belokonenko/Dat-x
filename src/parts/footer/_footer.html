@@ -1,59 +1,62 @@
 <footer class="footer">
     <div class="foorer__container container">
         <div class="footer__info">
-            <div class="col">
+            <div class="footer__col-logo col">
                 @@include('../header/logo/_logo.html')
                 <p class="footer__text-offer">
                     We offer our customers a wide range of vegetable seeds.
                 </p>
             </div>
-
-            <div class="col">
+            <div class="footer__col-info col">
                 <h3 class="footer__title">information</h3>
                 <a class="footer__ref" href="#">About company</a>
                 <a class="footer__ref" href="#">Payment and delivery</a>
                 <a class="footer__ref" href="#">Partners</a>
             </div>
-            
-            <div class="col">
-                <h3 class="footer__title" >Goods</h3>
+
+            <div class="footer__col-goods col">
+                <h3 class="footer__title">Goods</h3>
                 <a class="footer__ref" href="#">Product catalog</a>
                 <a class="footer__ref" href="#">Plant protection products</a>
                 <a class="footer__ref" href="#">Seeds</a>
                 <a class="footer__ref" href="#">Fertilizers</a>
                 <a class="footer__ref" href="#">Agronomist to help</a>
             </div>
-            
-            <div class="col">
-                <h3 class="footer__title" >Contacts</h3>
+
+            <div class="footer__col-contacts col">
+                <h3 class="footer__title">Contacts</h3>
                 @@include('../header/order/_order.html')
-                <div>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
+
+                <div class="footer__mail-wrap">
+                    <div class="round-button">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                        >
+                            <g clip-path="url(#clip0_25_508)">
+                                <path
+                                    d="M0 2.375V13.625H16V2.375H0ZM14.3962 3.3125L8 9.68225L1.60376 3.3125H14.3962ZM0.9375 12.6875V3.97217L8 11.0054L15.0625 3.97217V12.6875H0.9375Z"
+                                    fill="#8D3200"
+                                    stroke="white"
+                                    stroke-width="0.2"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_25_508">
+                                    <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <a class="footer__mail" href="mailto:DAT@gmail.com"
+                        >DAT@gmail.com</a
                     >
-                        <g clip-path="url(#clip0_25_508)">
-                            <path
-                                d="M0 2.375V13.625H16V2.375H0ZM14.3962 3.3125L8 9.68225L1.60376 3.3125H14.3962ZM0.9375 12.6875V3.97217L8 11.0054L15.0625 3.97217V12.6875H0.9375Z"
-                                fill="#8D3200"
-                                stroke="white"
-                                stroke-width="0.2"
-                            />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_25_508">
-                                <rect width="16" height="16" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
                 </div>
             </div>
         </div>
-
-        <!-- <p>DAT@gmail.com</p> -->
     </div>
 
     <div class="footer__c container">
