@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     padding-top: 120px;
-    background-color: red;
+    // background-color: red;
 
     // --- block 4 columns ---
 
@@ -32,21 +32,21 @@
         max-width: 200px;
     }
 
-    & h3 {
+    & .col h3 {
         font-size: 18px;
         font-weight: 600;
         color: $color-text-alpha;
     }
 
-    & a {
+    & .col a {
         display: block;
         font-size: 18px;
         font-weight: 400;
         color: $color-text-alpha;
     }
 
-    & a,
-    h3 {
+    & .col a,
+   .col h3 {
         margin-bottom: 25px;
         line-height: 1;
     }
@@ -62,7 +62,7 @@
     
     &__c-text {
         text-align: center;
-        margin: 20px 0;
+        padding: 20px 0;
         font-size: 0.9rem;
         font-weight: 400;
         opacity: 0.5;
@@ -81,13 +81,15 @@
         height: 150px;
         background-color: $color-beta;
         border-radius: 50px  50px 0 0;
+        margin: 0;
         &::after {
             content: url(../../img/arrow-white.svg);
             position: absolute;
             left: 50%;
             top: 10%;
-            background-color: red;
             transform: rotate(-90deg)translateY(-50%);
+            width: 20px;
+            height: 20px;
         }
     } 
     
