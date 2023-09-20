@@ -4,6 +4,7 @@
     background-size: cover;
     background-position: center center;
     min-height: 627px;
+    padding: 20px 0;
 
     &__container {
         display: flex;
@@ -19,6 +20,7 @@
     &__text {
         color: $color-text-beta;
         line-height: 1.6;
+        transition: all .3s ease;
     }
 
     &__seeds-btn {
@@ -61,12 +63,12 @@
             }
         }
 
-        &__text-hidden-mob {
-            display: none;
+        &__text-hidden {
+            font-size: 0;
         }
 
-        &__text-hidden-mob--active {
-            display: block;
+        &__text--active {
+            font-size: 1rem;
         }
     }
 }
