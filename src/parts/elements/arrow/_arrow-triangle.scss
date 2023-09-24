@@ -1,0 +1,14 @@
+
+.arrow-triangle {
+    $arrow-size : 10px;
+    $arrow-color: grey;
+
+    display: inline-flex;
+    border: $arrow-size solid transparent;
+    box-sizing: border-box;
+    border-right: $arrow-size solid $arrow-color;
+    box-sizing: border-box;
+    border-left:none;
+    transition: all .3s ease;
+    transform: rotate(0deg);
+}

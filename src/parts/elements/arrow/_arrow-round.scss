@@ -1,0 +1,33 @@
+.arrow-round {
+    $round-size: 20px;
+    $round-arr-width: 3px;
+    $round-arr-size: 30%;
+
+    position: relative;
+    display: inline-flex;
+    width: $round-size;
+    height: $round-size;
+    background: grey;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: $round-arr-size;
+        height: $round-arr-size;
+        border-top: solid $round-arr-width #fff;
+        border-left: solid $round-arr-width #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+        background: lightgray;
+    }
+
+    &:hover::before {
+        border-color: grey;     
+    }
+}

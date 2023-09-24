@@ -1,0 +1,12 @@
+.round-btn {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid $color-beta;
+    background-color: transparent;
+
+}

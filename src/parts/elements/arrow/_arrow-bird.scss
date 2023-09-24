@@ -1,0 +1,12 @@
+.arrow-bird {
+    $size-a-b : 10px;
+    $width-a-b : 3px;
+    
+    display: inline-flex;
+    width: $size-a-b;
+    height: $size-a-b;
+    border-top: $width-a-b solid gray;
+    border-left: $width-a-b solid gray;
+    transform: rotate(-45deg);
+
+}

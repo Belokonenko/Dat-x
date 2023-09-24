@@ -1,92 +1,106 @@
-.novelties__container {
-    position: relative;
-    display: grid;
-    place-items: center;
-    margin: 0;
-    padding: 0;
-    background: teal;
-
-}
-
-.novelties__slider-container {
-    position: relative;
-    overflow: hidden;
-    height: 355px;
-    width: 85vw;
-    max-width: 1140px;
-    background: #54d5e4;
-    // box-shadow: 5px 5px 8px gray inset;
-    padding: 0px;
-}
-
-.novelties__slider-container .novelties__btn {
-    position: absolute;
-    top: calc(50% - 30px);
-    height: 30px;
-    width: 30px;
-    border-left: 8px solid pink;
-    border-top: 8px solid pink;
-}
-
-.novelties__slider-container .novelties__btn:hover {
-    transform: scale(1.2);
-}
-
-.novelties__slider-container .novelties__btn.inactive {
-    border-color: rgb(153, 121, 126);
-}
-
-.novelties__slider-container .novelties__btn:first-of-type {
-    transform: rotate(-45deg);
-    left: 10px;
-}
-
-.novelties__slider-container .novelties__btn:last-of-type {
-    transform: rotate(135deg);
-    right: 10px;
-}
-
-.novelties__slider-container .novelties__slider {
-    display: flex;
-    width: 1000%;
-    height: 100%;
-    transition: all 0.5s;
-}
-
-.novelties__slider-container .novelties__slider .novelties__slide {
-    height: 90%;
-    margin: auto 10px;
-    background-color: #a847a4;
-    box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
-    display: grid;
-    place-items: center;
-}
-
-.novelties__slider-container .novelties__slider .novelties__slide span {
-    color: white;
-    font-size: 150px;
-}
-
-@media only screen and (min-width: 1100px) {
-    .novelties__slider-container .novelties__slider .novelties__slide {
-        width: calc(2.5% - 20px);
+.novelties {
+    &__container {
+        position: relative;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        padding: 0;
+        background: teal;
     }
-}
 
-@media only screen and (max-width: 1100px) {
-    .novelties__slider-container .novelties__slider .novelties__slide {
-        width: calc(3.3333333% - 20px);
+    &__slider-container {
+        position: relative;
+        overflow: hidden;
+        height: 355px;
+        width: 85vw;
+        max-width: 1140px;
+        background: #54d5e4;
+        // box-shadow: 5px 5px 8px gray inset;
+        padding: 0px;
     }
-}
 
-@media only screen and (max-width: 900px) {
-    .novelties__slider-container .novelties__slider .novelties__slide {
-        width: calc(5% - 20px);
+    &__btn {
+        position: absolute;
+        top: calc(50%);
+        
+        &:hover {
+            background-color: $color-beta;
+        }
+        
+        &:hover > .arrow-arr::before {
+            background-color: #fff;
+        }
+        
+        &:hover > .arrow-arr::after {
+            border-color: #fff;
+        }
+        &:active {
+            background-color: $color-alpha;
+            border-color:$color-alpha ;
+        }
     }
-}
+    
+    &:focus {
+        
+    }
 
-@media only screen and (max-width: 550px) {
-    .novelties__slider-container .novelties__slider .novelties__slide {
-        width: calc(10% - 20px);
+    &__btn:hover {
+    }
+
+    &__btn.inactive {
+    }
+
+    &__btn-left {
+        left: 10px;
+    }
+
+    &__btn-right {
+        transform: rotate(180deg);
+        right: 10px;
+    }
+
+    &__slider {
+        display: flex;
+        width: 1000%;
+        height: 100%;
+        transition: all 0.5s;
+    }
+
+    &__slide {
+        height: 90%;
+        margin: auto 10px;
+        background-color: #a847a4;
+        box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+        display: grid;
+        place-items: center;
+    }
+
+    &__slide span {
+        color: white;
+        font-size: 150px;
+    }
+
+    @media only screen and (min-width: 1100px) {
+        &__slide {
+            width: calc(2.5% - 20px);
+        }
+    }
+
+    @media only screen and (max-width: 1100px) {
+        &__slide {
+            width: calc(3.3333333% - 20px);
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        &__slide {
+            width: calc(5% - 20px);
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        &__slide {
+            width: calc(10% - 20px);
+        }
     }
 }
