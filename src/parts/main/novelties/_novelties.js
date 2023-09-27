@@ -13,13 +13,19 @@ export default function novelties() {
     let containerWidth = container.offsetWidth;
     var prevKeyActive = false;
     var nextKeyActive = true;
+    
+    const debounce = (callback, timeout) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => callback(), timeout);
+    };
 
     window.addEventListener("resize", checkWidth);
 
     function checkWidth() {
+        console.log("checkWidth");
         containerWidth = container.offsetWidth;
-        // console.log(container.offsetWidth);
         setParams(containerWidth);
+
     }
 
     function setParams(w) {
@@ -105,34 +111,30 @@ export default function novelties() {
     slider.addEventListener("touchmove", handleTouchMove, false);
 
     let x1 = null;
-    let y1 = null;
 
     function handleTouchStart(event) {
-        const firstTouch = event.touches[0];
-        
-        // console.log(event);
-        // console.log(event.touches[0].clientX);
-        // console.log(event.touches[0].clientY);
-
-        x1 = firstTouch.clientX;
-        y1 = firstTouch.clientY;
+        x1 = event.touches[0].clientX;
     }
-    
-    function handleTouchMove(event) { 
-        if (!x1 || !y1) {
+
+    let timeoutId;
+
+
+    function handleTouchMove(event) {
+        if (!x1) {
             return false;
         }
 
         let x2 = event.touches[0].clientX;
-        let y2 = event.touches[0].clientY;
-
-        // console.log(x2, y2);
-        //
         let xDiff = x1 - x2;
-        let yDiff = y1 - y2;
 
-        console.log(xDiff, yDiff);
-
+        debounce(() => {
+            console.log(xDiff);
+            console.log(slider);
+            if (xDiff < 0) {
+              slideRight()  ;
+            }
+        },500);
     }
+
     // --- /swipe slides ---
 }
