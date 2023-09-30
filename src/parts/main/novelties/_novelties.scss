@@ -1,107 +1,35 @@
-.novelties {
-    &__container {
-        position: relative;
-        display: grid;
-        place-items: center;
-        margin: 0;
-        padding: 0;
-        background: teal;
-        border: 5px solid red;
-    }
-
-    &__slider-container {
-        position: relative;
-        overflow: hidden;
-        height: 355px;
-        width: 85vw;
-        max-width: 1140px;
-        background: #54d5e4;
-        padding: 0px;
-        border: 5px solid blue;
-    }
-
-    &__btn {
-        position: absolute;
-        top: calc(50%);
-        
-        &:hover {
-            background-color: $color-beta;
-        }
-        
-        &:hover > .arrow-arr::before {
-            background-color: #fff;
-        }
-        
-        &:hover > .arrow-arr::after {
-            border-color: #fff;
-        }
-        &:active {
-            background-color: $color-alpha;
-            border-color:$color-alpha ;
-        }
-    }
+* {
+    box-sizing: border-box;
+}
+.slider {
+    min-height: 255px;
+    overflow: hidden;
+    background-color: rgba(1, 1, 1, .2);
     
-    &:focus {
-        
-    }
+}
 
-    &__btn:hover {
-    }
+.slider-line {
+    display: grid;
+    gap: 30px;
+    grid-auto-flow: column;
+    height: 100%;
+    transition: all 0.7s ease;
+}
 
-    &__btn.inactive {
-    }
-
-    &__btn-left {
-        left: 10px;
-    }
-
-    &__btn-right {
-        transform: rotate(180deg);
-        right: 10px;
-    }
-
-    &__slider {
-        display: flex;
-        width: 1000%;
-        height: 100%;
-        transition: all 0.5s;
-    }
-
-    &__slide {
-        height: 90%;
-        margin: auto 10px;
-        background-color: #a847a4;
-        box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
-        display: grid;
-        place-items: center;
-    }
-
-    &__slide span {
-        color: white;
-        font-size: 150px;
-    }
-
-    @media only screen and (min-width: 1100px) {
-        &__slide {
-            width: calc(2.5% - 20px);
-        }
-    }
-
-    @media only screen and (max-width: 1100px) {
-        &__slide {
-            width: calc(3.3333333% - 20px);
-        }
-    }
-
-    @media only screen and (max-width: 900px) {
-        &__slide {
-            width: calc(5% - 20px);
-        }
-    }
-
-    @media only screen and (max-width: 550px) {
-        &__slide {
-            width: calc(10% - 20px);
-        }
-    }
+.slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+    // border: 1px solid red; 
+    background-color: rgba(1, 1, 1, .2);
+}
+.novelties__slide {
+    // border: 1px solid red; 
+    width: 100%;
+}
+.slider__btn {
+    padding: 10px;
+    font-size: 2rem;
 }
