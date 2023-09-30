@@ -8,6 +8,8 @@ export default function novelties() {
 
     let counnt = 0;
 
+        let n = 0
+
     // --- main ---
 
     resetSize();
@@ -62,8 +64,6 @@ export default function novelties() {
 
     function calcGap() {
         let gap = parseInt(window.getComputedStyle(sliderLine).gap);
-        console.log(gap);
-        console.log(gap * ( getCounntVisebleItem() - 1) /  getCounntVisebleItem());
         return gap * ( getCounntVisebleItem() - 1) /  getCounntVisebleItem()
     }
 
@@ -102,8 +102,8 @@ export default function novelties() {
 
     function mouveLine() {
         //------- no break point mouve -----------
-
         console.log(`function mouveline : counnt = ${counnt}`);
+        console.log(++n);
 
         if (counnt < 0) {
             counnt = getMaxCounnt();
@@ -149,6 +149,7 @@ export default function novelties() {
     }
 
     function swipeStart(event) {
+        console.log("swipeStart");
         let e = getEvent(event);
         posInit = posX1 = e.clientX; // first coordinate X axis
 
@@ -164,6 +165,7 @@ export default function novelties() {
     }
 
     function swipeAction(event) {
+        console.log("swipeAction");
         let e = getEvent(event);
         let style = sliderLine.style.transform; // получаем занчение transform в формате 'translateX(0px)'
         let transform = +style.match(trfRegExp)[0]; // считываем трансформацию с помощью регулярного выражения и сразу превращаем в число
