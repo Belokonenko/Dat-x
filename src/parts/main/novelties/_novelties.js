@@ -6,7 +6,7 @@ export default function novelties() {
     const bntLeft = document.querySelector(".slider__btn-left");
     const bntRight = document.querySelector(".slider__btn-right");
 
-    let counnt = 0;
+    let counnt = Math.round(getCounntItems()/ 2) ;
 
     let n = 0;
 

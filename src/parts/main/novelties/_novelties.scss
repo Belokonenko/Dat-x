@@ -1,5 +1,6 @@
 .novelties {
     overflow: hidden;
+    background-color:$color-bg-beta ;
 }
 
 //--- slider ---
@@ -9,11 +10,9 @@
 }
 .slider {
     min-height: 255px;
-
+    border: 15px solid transparent;
     &__wrap {
-    position: relative;
-    overflow: hidden;
-    padding: 20px 20px;
+        overflow: hidden;
     }
 
     &__line {
@@ -32,7 +31,7 @@
         user-select: none;
         // border: 1px solid red;
     }
-    
+
     &__btn {
         position: absolute;
         top: 50%;
@@ -44,21 +43,40 @@
         height: 70px;
         border: 1px solid $color-alpha;
         z-index: 1;
-        
-        &-left {
-            left: -50px;
 
+        &-left {
         }
 
         &-right {
         }
     }
-    
-    
+    // ---  adaptive ---
+
+    @media (max-width: 1440px) {
+    }
+    @media (max-width: 1024px) {
+    }
+    @media (max-width: 992px) {
+    }
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 425px) {
+        & {
+            margin: 50px;
+        } 
+    }
+    @media (max-width: 375px) {
+    }
+    @media (max-width: 320px) {
+    }
+
+    // ---  /adaptive ---
 }
+
 //--- /slider ---
 
 //--- card ---
+
 .card {
     display: grid;
     grid-template-rows: 1fr max-content;
@@ -109,13 +127,13 @@
         font-weight: 400;
         margin-bottom: 20px;
     }
-    
+
     &__prod-parce {
         color: $color-beta;
         font-size: 1.1rem;
         font-weight: 700;
     }
-    
+
     &__prod-quantity {
         font-size: 0.9rem;
         font-weight: 400;
