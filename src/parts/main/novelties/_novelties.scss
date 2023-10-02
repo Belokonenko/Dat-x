@@ -1,5 +1,4 @@
 .novelties {
-    overflow: hidden;
     background-color:$color-bg-beta ;
 }
 
@@ -11,8 +10,15 @@
 .slider {
     min-height: 255px;
     border: 15px solid transparent;
+    
+    &__block {
+        position: relative;
+
+    }
+
     &__wrap {
         overflow: hidden;
+        border: 1px solid $color-alpha;
     }
 
     &__line {
@@ -37,26 +43,41 @@
         top: 50%;
         transform: translateY(-50%);
         border-radius: 50%;
-        padding: 10px;
-        font-size: 2rem;
         width: 70px;
         height: 70px;
         border: 1px solid $color-alpha;
         z-index: 1;
 
         &-left {
+            left: -70px;
         }
 
         &-right {
+            right: -70px;
         }
     }
     // ---  adaptive ---
 
     @media (max-width: 1440px) {
+
+    &__btn {
+      
+        &-left {
+            left: 30px;
+        }
+
+        &-right {
+            right: 30px;
+        }
+    }
     }
     @media (max-width: 1024px) {
     }
     @media (max-width: 992px) {
+    &__btn {
+        display: none;
+      
+    }
     }
     @media (max-width: 768px) {
     }
