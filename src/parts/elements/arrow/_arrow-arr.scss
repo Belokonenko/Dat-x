@@ -1,11 +1,14 @@
 .arrow-arr {
-    $arrow-arr-size: 20px;
+    $arrow-arr-size: 100%;
     $arrow-arr-width : 2px; 
     $arrow-arr-color: $color-beta;
     //---------------------------- 
+    border-radius: 50%;
     position: relative;
     height: $arrow-arr-size;
     width: $arrow-arr-size;
+
+
 
     &::after {
         content: "";
@@ -14,7 +17,7 @@
         border-top: 2px solid $arrow-arr-color;
         width: 10px;
         height: 10px;
-        left: 0;
+        left: 39%;
         top: 50%;
         transform: translateY(-50%) rotate(-45deg);
     }
@@ -22,10 +25,10 @@
     &::before{
         content: "";
         position: absolute;
-        width: 100%;
-        left: 0;
+        width: 20%;
+        left: 50%;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%,-50%);
         height: $arrow-arr-width;
         background-color: $arrow-arr-color;
     }
