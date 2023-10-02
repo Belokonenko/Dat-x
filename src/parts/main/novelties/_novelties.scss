@@ -1,39 +1,133 @@
+.novelties {
+    overflow: hidden;
+}
+
+//--- slider ---
+
 * {
     box-sizing: border-box;
 }
-.slider-wrap {
-// padding: 290px;
-//     overflow: hidden;
-}
 .slider {
     min-height: 255px;
+
+    &__wrap {
+    position: relative;
     overflow: hidden;
-    background-color: rgba(1, 1, 1, .2);
+    padding: 20px 20px;
+    }
+
+    &__line {
+        display: grid;
+        gap: 30px;
+        grid-auto-flow: column;
+        height: 100%;
+        transition: all 0.7s ease;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        user-select: none;
+        // border: 1px solid red;
+    }
+    
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 2rem;
+        width: 70px;
+        height: 70px;
+        border: 1px solid $color-alpha;
+        z-index: 1;
+        
+        &-left {
+            left: -50px;
+
+        }
+
+        &-right {
+        }
+    }
+    
     
 }
+//--- /slider ---
 
-.slider-line {
+//--- card ---
+.card {
     display: grid;
-    gap: 30px;
-    grid-auto-flow: column;
-    height: 100%;
-    transition: all 0.7s ease;
+    grid-template-rows: 1fr max-content;
+    position: relative;
+    width: 100%;
+    min-height: 355px;
+    border-radius: 20px;
+    background: $color-bg-alpha;
+    transition: all 0.3s ease;
+    padding: 10px;
+
+    &:hover {
+        box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    &__btn-compare {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: inline-block;
+        padding: 10px;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    &__img-wrap {
+        width: 100px;
+        margin: 20px auto 30px auto;
+    }
+
+    &__img {
+    }
+
+    &__block-text {
+        position: relative;
+        padding: 20px;
+        border-radius: 20px;
+        background: rgba(140, 50, 19, 0.06);
+    }
+
+    &__prod-name {
+        font-weight: 600;
+    }
+
+    &__prod-state {
+        color: $color-alpha;
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    
+    &__prod-parce {
+        color: $color-beta;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    
+    &__prod-quantity {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    &__btn-bask {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.15);
+        border-color: transparent;
+    }
 }
 
-.slider-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    user-select: none;
-    // border: 1px solid red; 
-    background-color: rgba(1, 1, 1, .2);
-}
-.novelties__slide {
-    // border: 1px solid red; 
-    width: 100%;
-}
-.slider__btn {
-    padding: 10px;
-    font-size: 2rem;
-}
+//--- /card ---

@@ -1,14 +1,14 @@
 export default function novelties() {
     const slider = document.querySelector(".slider");
-    const sliderLine = document.querySelector(".slider-line");
-    const sliderItems = document.querySelectorAll(".slider-item");
+    const sliderLine = document.querySelector(".slider__line");
+    const sliderItems = document.querySelectorAll(".slider__item");
     //------------------------------------------------------------
-    const bntLeft = document.querySelector(".bnt-left");
-    const bntRight = document.querySelector(".bnt-right");
+    const bntLeft = document.querySelector(".slider__btn-left");
+    const bntRight = document.querySelector(".slider__btn-right");
 
     let counnt = 0;
 
-        let n = 0
+    let n = 0;
 
     // --- main ---
 
@@ -50,21 +50,23 @@ export default function novelties() {
     }
 
     function setWidthItems() {
-        const slideWidth = `${getWidthSlider() / getCounntVisebleItem()- calcGap() }px`;
+        const slideWidth = `${
+            getWidthSlider() / getCounntVisebleItem() - calcGap()
+        }px`;
 
         sliderItems.forEach((item) => {
             // mouve all slids and set size
             item.style.width = slideWidth;
         });
     }
-    
+
     function getGap() {
         return parseInt(window.getComputedStyle(sliderLine).gap);
     }
 
     function calcGap() {
         let gap = parseInt(window.getComputedStyle(sliderLine).gap);
-        return gap * ( getCounntVisebleItem() - 1) /  getCounntVisebleItem()
+        return (gap * (getCounntVisebleItem() - 1)) / getCounntVisebleItem();
     }
 
     function getCounntVisebleItem() {
@@ -85,10 +87,10 @@ export default function novelties() {
                 counntVisebleItem = 3;
                 break;
             case width >= 425:
-                counntVisebleItem = 3;
+                counntVisebleItem = 2;
                 break;
             case width >= 375:
-                counntVisebleItem = 2;
+                counntVisebleItem = 1;
                 break;
             case width >= 325:
                 counntVisebleItem = 1;
@@ -115,7 +117,7 @@ export default function novelties() {
 
         //------- /no break point mouve -----------
         sliderLine.style.transform = `translateX(-${
-            (getWidthItem()+ getGap()/ getCounntVisebleItem()) * counnt
+            (getWidthItem() + getGap() / getCounntVisebleItem()) * counnt
         }px)`;
     }
 

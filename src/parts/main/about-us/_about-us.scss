@@ -2,44 +2,44 @@
     position: relative;
     padding: 100px 20px;
     max-width: 1350px;
-    overflow: hidden;
+    // overflow: hidden;
     margin: 0 auto;
-        &::before {
-            content: "";
-            position: absolute;
-            z-index: 0;
-            left: 90%;
-            top: 0;
-            width: 713px;
-            height: 713px;
-            flex-shrink: 0;
-            border-radius: 713px;
-            background: radial-gradient(
-                50% 50% at 50% 50%,
-                rgba(231, 78, 19, 0.1) 0%,
-                rgba(231, 78, 19, 0) 100%
-            );
-            filter: blur(30px);
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     z-index: 0;
+        //     left: 90%;
+        //     top: 0;
+        //     width: 713px;
+        //     height: 713px;
+        //     flex-shrink: 0;
+        //     border-radius: 713px;
+        //     background: radial-gradient(
+        //         50% 50% at 50% 50%,
+        //         rgba(231, 78, 19, 0.1) 0%,
+        //         rgba(231, 78, 19, 0) 100%
+        //     );
+        //     filter: blur(30px);
+        // }
 
-        &::after {
-            content: "";
-            position: absolute;
-            z-index: 0;
-            left: -45%;
-            bottom: -350px;
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     z-index: 0;
+        //     left: -45%;
+        //     bottom: -350px;
 
-            width: 713px;
-            height: 713px;
-            flex-shrink: 0;
-            border-radius: 713px;
-            background: radial-gradient(
-                50% 50% at 50% 50%,
-                rgba(231, 78, 19, 0.1) 0%,
-                rgba(231, 78, 19,0) 100%
-            );
-            filter: blur(30px);
-        }
+        //     width: 713px;
+        //     height: 713px;
+        //     flex-shrink: 0;
+        //     border-radius: 713px;
+        //     background: radial-gradient(
+        //         50% 50% at 50% 50%,
+        //         rgba(231, 78, 19, 0.1) 0%,
+        //         rgba(231, 78, 19,0) 100%
+        //     );
+        //     filter: blur(30px);
+        // }
 
     &__container {
         display: grid;
