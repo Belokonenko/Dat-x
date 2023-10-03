@@ -1,5 +1,9 @@
 .novelties {
     background-color: $color-bg-beta;
+    
+    &__title {
+        text-align: center;
+    }
 }
 
 //--- slider ---
