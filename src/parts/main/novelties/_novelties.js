@@ -7,17 +7,15 @@ export default function novelties() {
     const bntRight = document.querySelector(".slider__btn-right");
     //------------------------------------------------------------
     const dotsList = document.querySelector(".slider__dot-list");
-    const dots = document.querySelectorAll(".slider__dot")
     //------------------------------------------------------------
     let counnt = Math.round(getCounntItems() / 2);
 
     let n = 0;
 
     // --- main ---
-    
-    
+
     resetSize();
-    
+
     window.addEventListener("resize", resetSize);
 
     bntLeft.addEventListener("click", () => {
@@ -29,7 +27,7 @@ export default function novelties() {
     });
 
     createDots(dotsList);
-    
+
     // --- main ---
 
     // --- functions ---
@@ -215,7 +213,6 @@ export default function novelties() {
 
     // --- dots ---
 
-
     function createDots(dotsList) {
         for (let index = 0; index < 5; index++) {
             const dot = document.createElement("li");
@@ -223,14 +220,30 @@ export default function novelties() {
             dot.classList.add("slider__dot");
             dot.setAttribute("data-cunt", index);
             dot.addEventListener("click", () => {
+                counnt = index;
+                activeDot(counnt);
+                mouveLine();
             });
             dotsList.append(dot);
         }
+       
+        activeDot(counnt);
     }
 
+    function activeDot(num) {
+        console.log(`activeDot`);
+        const dots = getDots();
 
+        dots.forEach((item) => {
+            item.classList.remove("slider__dot--active");
+        });
 
+        dots[num].classList.add("slider__dot--active");
+    }
 
+    function getDots() {
+        return document.querySelectorAll(".slider__dot");
+    }
 
     // --- dots ---
 
