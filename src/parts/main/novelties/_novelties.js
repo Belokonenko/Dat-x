@@ -5,15 +5,19 @@ export default function novelties() {
     //------------------------------------------------------------
     const bntLeft = document.querySelector(".slider__btn-left");
     const bntRight = document.querySelector(".slider__btn-right");
-
-    let counnt = Math.round(getCounntItems()/ 2) ;
+    //------------------------------------------------------------
+    const dotsList = document.querySelector(".slider__dot-list");
+    const dots = document.querySelectorAll(".slider__dot")
+    //------------------------------------------------------------
+    let counnt = Math.round(getCounntItems() / 2);
 
     let n = 0;
 
     // --- main ---
-
+    
+    
     resetSize();
-
+    
     window.addEventListener("resize", resetSize);
 
     bntLeft.addEventListener("click", () => {
@@ -24,6 +28,8 @@ export default function novelties() {
         right();
     });
 
+    createDots(dotsList);
+    
     // --- main ---
 
     // --- functions ---
@@ -104,8 +110,6 @@ export default function novelties() {
 
     function mouveLine() {
         //------- no break point mouve -----------
-        console.log(`function mouveline : counnt = ${counnt}`);
-        console.log(++n);
 
         if (counnt < 0) {
             counnt = getMaxCounnt();
@@ -151,7 +155,6 @@ export default function novelties() {
     }
 
     function swipeStart(event) {
-        console.log("swipeStart");
         let e = getEvent(event);
         posInit = posX1 = e.clientX; // first coordinate X axis
 
@@ -167,7 +170,6 @@ export default function novelties() {
     }
 
     function swipeAction(event) {
-        console.log("swipeAction");
         let e = getEvent(event);
         let style = sliderLine.style.transform; // получаем занчение transform в формате 'translateX(0px)'
         let transform = +style.match(trfRegExp)[0]; // считываем трансформацию с помощью регулярного выражения и сразу превращаем в число
@@ -180,7 +182,6 @@ export default function novelties() {
     }
 
     function swipeEnd() {
-        console.log(`swipeEnd()`);
         // финальная позиция курсора
         posFinal = posInit - posX1;
 
@@ -211,6 +212,27 @@ export default function novelties() {
     }
 
     // --- /swipe ---
+
+    // --- dots ---
+
+
+    function createDots(dotsList) {
+        for (let index = 0; index < 5; index++) {
+            const dot = document.createElement("li");
+
+            dot.classList.add("slider__dot");
+            dot.setAttribute("data-cunt", index);
+            dot.addEventListener("click", () => {
+            });
+            dotsList.append(dot);
+        }
+    }
+
+
+
+
+
+    // --- dots ---
 
     // --- /functions ---
     //
