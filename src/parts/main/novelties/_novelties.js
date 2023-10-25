@@ -13,6 +13,9 @@ export default function novelties() {
     let n = 0;
 
     // --- main ---
+    console.log(`items length = ${sliderItems.length}`);
+
+    createDots();
 
     resetSize();
 
@@ -26,7 +29,11 @@ export default function novelties() {
         right();
     });
 
-    createDots(dotsList);
+    sliderItems.forEach((item, i) => {
+        item.addEventListener("click", () => {
+           console.log(i); 
+        });
+    });
 
     // --- main ---
 
@@ -108,6 +115,7 @@ export default function novelties() {
 
     function mouveLine() {
         //------- no break point mouve -----------
+        console.log(counnt);
 
         if (counnt < 0) {
             counnt = getMaxCounnt();
@@ -121,6 +129,12 @@ export default function novelties() {
         sliderLine.style.transform = `translateX(-${
             (getWidthItem() + getGap() / getCounntVisebleItem()) * counnt
         }px)`;
+
+        console.log(counnt);
+        activeDot(counnt);
+
+        if (counnt) {
+        }
     }
 
     function left() {
@@ -213,8 +227,8 @@ export default function novelties() {
 
     // --- dots ---
 
-    function createDots(dotsList) {
-        for (let index = 0; index < 5; index++) {
+    function createDots() {
+        for (let index = 0; index < sliderItems.length; index++) {
             const dot = document.createElement("li");
 
             dot.classList.add("slider__dot");
@@ -226,12 +240,13 @@ export default function novelties() {
             });
             dotsList.append(dot);
         }
-       
+
         activeDot(counnt);
     }
 
     function activeDot(num) {
         console.log(`activeDot`);
+
         const dots = getDots();
 
         dots.forEach((item) => {
