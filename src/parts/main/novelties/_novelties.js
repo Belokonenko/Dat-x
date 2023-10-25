@@ -229,16 +229,26 @@ export default function novelties() {
 
     function createDots() {
         for (let index = 0; index < sliderItems.length; index++) {
-            const dot = document.createElement("li");
+            const dotWrap = document.createElement("li");
+            const dot = document.createElement("div");
 
+            
+
+            
+            dotWrap.classList.add("slider__dot-wrap");
             dot.classList.add("slider__dot");
-            dot.setAttribute("data-cunt", index);
-            dot.addEventListener("click", () => {
+            
+            dotWrap.setAttribute("data-cunt", index);
+            
+            dotWrap.addEventListener("click", () => {
                 counnt = index;
                 activeDot(counnt);
                 mouveLine();
             });
-            dotsList.append(dot);
+
+            
+            dotsList.append(dotWrap);
+            dotWrap.append(dot);
         }
 
         activeDot(counnt);
