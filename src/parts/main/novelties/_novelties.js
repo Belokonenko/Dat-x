@@ -1,6 +1,9 @@
 export default function novelties() {
     const slider = document.querySelector(".slider");
     const sliderLine = document.querySelector(".slider__line");
+    
+    
+
     const sliderItems = document.querySelectorAll(".slider__item");
     //------------------------------------------------------------
     const bntLeft = document.querySelector(".slider__btn-left");
@@ -13,7 +16,6 @@ export default function novelties() {
     let n = 0;
 
     // --- main ---
-    console.log(`items length = ${sliderItems.length}`);
 
     createDots();
 
