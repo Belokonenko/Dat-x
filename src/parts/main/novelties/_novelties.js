@@ -62,7 +62,7 @@ export default function novelties() {
 
         function resetSize() {
             setWidthItems();
-            mouveLine();
+            mouveLine(counnt);
         }
 
         function setWidthItems() {
@@ -120,34 +120,32 @@ export default function novelties() {
 
         // --- mouve ---
 
-        function mouveLine() {
+        function mouveLine( num ) {
             //------- no break point mouve -----------
-
-            if (counnt < 0) {
-                counnt = getMaxCounnt();
+            if (num < 0) {
+                num = getMaxCounnt();
             }
 
-            if (counnt > getMaxCounnt()) {
-                counnt = 0;
+            if (num > getMaxCounnt()) {
+                num = 0;
             }
 
             //------- /no break point mouve -----------
 
             sliderLine.style.transform = `translateX(-${
-                (getWidthItem() + getGap() / getCounntVisebleItem()) * counnt
+                (getWidthItem() + getGap() / getCounntVisebleItem()) * num
             }px)`;
 
-            activeDot(counnt);
+            activeDot(num);
+            counnt = num;
         }
 
         function left() {
-            --counnt;
-            mouveLine();
+            mouveLine(--counnt);
         }
 
         function right() {
-            ++counnt;
-            mouveLine();
+            mouveLine(++counnt);
         }
 
         // --- /mouve ---
@@ -208,12 +206,10 @@ export default function novelties() {
 
             slider.removeEventListener("pointerout", swipeEnd);
 
-            if (Math.abs(posFinal) > getMaxCounnt()) {
-                // убираем знак минус и сравниваем с порогом сдвига слайда
-                if (posInit < posX1) {
-                    // если мы тянули вправо, то уменьшаем номер текущего слайда
-                    --counnt;
-                    // если мы тянули влево, то увеличиваем номер текущего слайда
+            if (Math.abs(posFinal) > getMaxCounnt()) {  // убираем знак минус и сравниваем с порогом сдвига слайда
+                if (posInit < posX1) {                  // если мы тянули вправо, то уменьшаем номер текущего слайда
+                    --counnt;                           // если мы тянули влево, то увеличиваем номер текущего слайда
+                
                 } else if (posInit > posX1) {
                     ++counnt;
                 }
@@ -223,7 +219,7 @@ export default function novelties() {
             if (posInit !== posX1) {
             }
 
-            mouveLine();
+            mouveLine(counnt);
         }
 
         // --- /swipe ---
@@ -246,8 +242,11 @@ export default function novelties() {
                     activeDot(counnt);
 
                     if (counnt <= getCounntItems() - getCounntVisebleItem()) {
-                        mouveLine();
+                        mouveLine(counnt);
+                    } else {
+
                     }
+
                 });
 
                 dotsList.append(dotWrap);
