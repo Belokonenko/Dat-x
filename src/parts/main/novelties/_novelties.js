@@ -4,18 +4,13 @@ export default function novelties() {
     if (sliderBlocs) {
         for (let index = 0; index < sliderBlocs.length; index++) {
             const element = sliderBlocs[index];
-            initSlider(element) ;
-            console.log(element);
+            initSlider(element);
         }
-    } 
+    }
 
     function initSlider(sliderblock) {
-        
-
         const slider = sliderblock.querySelector(".slider");
-
         const sliderLine = sliderblock.querySelector(".slider__line");
-
         const sliderItems = sliderblock.querySelectorAll(".slider__item");
         //------------------------------------------------------------
         const bntLeft = sliderblock.querySelector(".slider__btn-left");
@@ -24,8 +19,6 @@ export default function novelties() {
         const dotsList = sliderblock.querySelector(".slider__dot-list");
         //------------------------------------------------------------
         let counnt = Math.round(getCounntItems() / 2);
-
-        let n = 0;
 
         // --- main ---
 
@@ -43,10 +36,8 @@ export default function novelties() {
             right();
         });
 
-        sliderItems.forEach((item, i) => {
-            item.addEventListener("click", () => {
-                console.log(i);
-            });
+        sliderItems.forEach((item) => {
+            item.addEventListener("click", () => {});
         });
 
         // --- main ---
@@ -131,7 +122,6 @@ export default function novelties() {
 
         function mouveLine() {
             //------- no break point mouve -----------
-            console.log(counnt);
 
             if (counnt < 0) {
                 counnt = getMaxCounnt();
@@ -142,11 +132,11 @@ export default function novelties() {
             }
 
             //------- /no break point mouve -----------
+
             sliderLine.style.transform = `translateX(-${
                 (getWidthItem() + getGap() / getCounntVisebleItem()) * counnt
             }px)`;
 
-            console.log(counnt);
             activeDot(counnt);
 
             if (counnt) {
@@ -164,7 +154,7 @@ export default function novelties() {
         }
 
         // --- /mouve ---
-        //
+
         // ---  swipe ---
 
         let posInit = 0;
@@ -244,7 +234,6 @@ export default function novelties() {
         // --- dots ---
 
         function createDots() {
-            console.log(sliderblock);
             for (let index = 0; index < sliderItems.length; index++) {
                 const dotWrap = document.createElement("li");
                 const dot = document.createElement("div");
@@ -256,10 +245,13 @@ export default function novelties() {
 
                 dotWrap.addEventListener("click", () => {
                     counnt = index;
+                    
                     activeDot(counnt);
-                    mouveLine();
-                });
 
+                    if (counnt <= getCounntItems() - getCounntVisebleItem()) {
+                        mouveLine();
+                    }
+                });
 
                 dotsList.append(dotWrap);
                 dotWrap.append(dot);
@@ -269,8 +261,6 @@ export default function novelties() {
         }
 
         function activeDot(num) {
-            console.log(`activeDot`);
-
             const dots = getDots();
 
             dots.forEach((item) => {
@@ -284,10 +274,8 @@ export default function novelties() {
             return sliderblock.querySelectorAll(".slider__dot");
         }
 
-        // --- dots ---
+        // --- /dots ---
 
         // --- /functions ---
-        //
-        //
     }
 }
