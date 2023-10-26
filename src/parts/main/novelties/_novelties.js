@@ -138,9 +138,6 @@ export default function novelties() {
             }px)`;
 
             activeDot(counnt);
-
-            if (counnt) {
-            }
         }
 
         function left() {
