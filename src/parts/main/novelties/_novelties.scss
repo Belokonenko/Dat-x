@@ -99,14 +99,13 @@
         height: 30px;
         align-items: end;
         margin: 20px auto;
-
     }
 
     &__dot-wrap {
         display: flex;
         align-items: end;
         height: 100%;
-        padding:0 5px ;
+        padding: 0 5px;
     }
 
     &__dot {
@@ -114,7 +113,6 @@
         width: 6px;
         background-color: rgba(140, 50, 19, 0.06);
         border-radius: 25px;
-
     }
 
     &__dot--active {
@@ -138,6 +136,9 @@
     @media (max-width: 1024px) {
     }
     @media (max-width: 992px) {
+        &__line {
+            gap: 20px;
+        }
         &__btn {
             display: none;
         }
@@ -146,7 +147,14 @@
     }
     @media (max-width: 425px) {
         & {
-            margin: 50px;
+            margin: 20px;
+            &__line {
+                gap: 10px;
+            }
+        }
+
+        &__line {
+            gap: 10px;
         }
     }
     @media (max-width: 375px) {
