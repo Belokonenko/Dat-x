@@ -1,7 +1,85 @@
 .stock {
+    padding-top: 100px;
+    position: relative;
     background-color: $color-alpha;
-    
+    overflow: hidden;
+
+    & * {
+        z-index: 2;
+    }
+
+    &__gradient {
+        position: absolute;
+        display: inline-flex;
+        z-index: 1;
+        height: 500px;
+        width: 500px;
+        background-color: red;
+
+        &-bg-0 {
+            left: -250px;
+            top: -250px;
+            border-radius: 713px;
+            background: radial-gradient(
+                50% 50% at 50% 50%,
+                rgba(231, 78, 19, 0.2) 0%,
+                rgba(231, 78, 19, 0) 100%
+            );
+            filter: blur(30px);
+        }
+
+        &-bg-1 {
+            left: -250px;
+            bottom: -250px;
+            border-radius: 1068px;
+            background: radial-gradient(
+                50% 50% at 50% 50%,
+                rgba(132, 190, 81, 0.4) 0%,
+                rgba(210, 230, 189, 0) 100%
+            );
+            filter: blur(30px);
+        }
+
+        &-bg-2 {
+            right: -250px;
+            top: -250px;
+            border-radius: 713px;
+            background: radial-gradient(
+                50% 50% at 50% 50%,
+                rgba(231, 78, 19, 0.2) 0%,
+                rgba(231, 78, 19, 0) 100%
+            );
+            filter: blur(30px);
+        }
+
+        &-bg-3 {
+            right: -250px;
+            bottom: -250px;
+            border-radius: 1068px;
+            background: radial-gradient(
+                50% 50% at 50% 50%,
+                rgba(132, 190, 81, 0.4) 0%,
+                rgba(210, 230, 189, 0) 100%
+            );
+            filter: blur(30px);
+        }
+    }
+
     &__title {
         text-align: center;
+        color: $color-text-beta;
+    }
+
+    &__btn {
+        margin: 20px auto 120px auto;
+    }
+
+    & .slider__dot {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    & .slider__dot--active {
+        background-color: 
+         rgba(255, 255, 255, 1);
     }
 }

@@ -1,6 +1,8 @@
 .title {
     font-size: 3.438rem;
     font-weight: 700;
+    margin-bottom: 32px;
+    
     &::before {
         content: url(../img/leaf.svg);
         height: 32px;
