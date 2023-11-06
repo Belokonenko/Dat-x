@@ -1,0 +1,20 @@
+.partners {
+    background-color: $color-bg-beta;
+    min-height: 300px; 
+
+    &__title {
+        text-align: center;
+    }
+    &__wrap-slider {
+        border: 3px solid blue;
+
+    }
+    &__slider {
+        border: 3px solid green;
+    }
+    &__item {
+        border: 1px solid red;
+    }
+
+
+}
