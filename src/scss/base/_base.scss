@@ -19,8 +19,9 @@ html {
 
 body {
     position: relative;
-    width: 100%;
-    height: 100%;
+display: grid;
+grid-template-rows: 1fr max-content;
+min-height: 100%;
 
 }
 .contenet {
@@ -82,6 +83,11 @@ img {
     width: 100%;
     max-width: 1270px;
 }
+.p {
+    padding-top : 200px;
+    background-color: red;
+}
+
 @media (max-width: 1440px) {
 }
 
