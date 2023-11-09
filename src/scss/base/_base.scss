@@ -19,11 +19,11 @@ html {
 
 body {
     position: relative;
-display: grid;
-grid-template-rows: 1fr max-content;
-min-height: 100%;
-
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    min-height: 100%;
 }
+
 .contenet {
     max-width: 1110px;
 }
@@ -84,8 +84,7 @@ img {
     max-width: 1270px;
 }
 .p {
-    padding-top : 200px;
-    background-color: red;
+    padding-top: 200px;
 }
 
 @media (max-width: 1440px) {
@@ -99,7 +98,7 @@ img {
         padding: 0 20px;
     }
     .container-slider {
-        padding: 0 ;
+        padding: 0;
     }
 }
 
@@ -108,7 +107,7 @@ img {
         padding: 0 10px;
     }
     .container-slider {
-        padding: 0 ;
+        padding: 0;
     }
 }
 
@@ -117,7 +116,7 @@ img {
         padding: 0 10px;
     }
     .container-slider {
-        padding: 0 ;
+        padding: 0;
     }
 }
 
